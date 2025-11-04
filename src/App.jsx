@@ -1,9 +1,10 @@
+import LeftSidebar from "./components/LeftSidebar";
+
 function App() {
   return (
-    <>
-      <div>bobo</div>
-      Tangina
-    </>
+    <div className="flex min-h-screen">
+      <LeftSidebar />
+    </div>
   );
 }
 
