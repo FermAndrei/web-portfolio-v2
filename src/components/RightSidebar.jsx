@@ -133,7 +133,7 @@ const RightSidebar = () => {
               className="bg-slate-800/30 rounded-lg p-2.5 border border-slate-700/50 hover:bg-slate-800 transition-colors cursor-pointer group"
             >
               <div className="flex items-start gap-2">
-                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center flex-shrink-0">
+                <div className="w-7 h-7 rounded-lg bg-linear-to-br from-amber-500 to-orange-500 flex items-center justify-center shrink-0">
                   <Award className="w-3.5 h-3.5 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">

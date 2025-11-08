@@ -17,7 +17,7 @@ const MainContent = () => {
           alt="Abstract technology background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/90 via-slate-900/80 to-transparent">
+        <div className="absolute inset-0 bg-linear-to-r from-emerald-900/90 via-slate-900/80 to-transparent">
           <div className="flex items-center h-full px-6">
             <div>
               <div className="flex items-center gap-1.5 mb-2">
@@ -75,7 +75,7 @@ const MainContent = () => {
               className="bg-slate-800/50 border border-slate-700 rounded-xl p-3 hover:border-emerald-500/50 transition-colors"
             >
               <div
-                className={`w-8 h-8 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center mb-2`}
+                className={`w-8 h-8 rounded-lg bg-linear-to-br ${stat.color} flex items-center justify-center mb-2`}
               >
                 {stat.icon}
               </div>
@@ -135,7 +135,7 @@ const MainContent = () => {
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-3 hover:bg-slate-800/50 transition-colors"
             >
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-emerald-600/20 border-2 border-emerald-500 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-emerald-600/20 border-2 border-emerald-500 flex items-center justify-center shrink-0">
                   <CircleDot className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -259,7 +259,7 @@ const MainContent = () => {
             ].map((tech, index) => (
               <Badge
                 key={index}
-                className={`bg-gradient-to-r ${tech.color} text-white border-0 px-2.5 py-1 text-xs hover:scale-105 transition-transform`}
+                className={`bg-linear-to-r ${tech.color} text-white border-0 px-2.5 py-1 text-xs hover:scale-105 transition-transform`}
               >
                 {tech.name}
               </Badge>
