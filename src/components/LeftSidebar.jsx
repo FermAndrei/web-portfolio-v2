@@ -39,7 +39,7 @@ export function LeftSidebar({ activeSection = "home" }) {
             }}
           />
           <h2 className="text-sm mb-0.5">Ferm Andrei V. Trillana</h2>
-          <p className="text-xs mb-1">Frontend Developer</p>
+          <p className="text-xs mb-1 text-[#34d399]">Frontend Developer</p>
           <div className="flex items-center gap-1 text-xs text-slate-400">
             <MapPin className="w-3 h-3" />
             <span>Liliw, Laguna, PH</span>
@@ -115,7 +115,7 @@ export function LeftSidebar({ activeSection = "home" }) {
             </div>
           </div>
           <p className="text-slate-500 text-xs">
-            © {year}. All rights reserved.
+            Built by Ferm Andrei. <br />© {year} All rights reserved.
           </p>
         </div>
       </div>
