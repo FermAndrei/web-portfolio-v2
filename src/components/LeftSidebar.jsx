@@ -26,7 +26,7 @@ export function LeftSidebar({ activeSection = "home" }) {
   const year = new Date().getFullYear();
 
   return (
-    <aside className="w-56 bg-slate-900/50 border-r border-slate-800 flex flex-col h-screen sticky top-0">
+    <aside className="bg-slate-900/50 border-r border-slate-800 flex flex-col h-screen sticky top-0">
       <div className="flex flex-col h-full bg-slate-900 text-white">
         <div className="flex flex-col items-center text-center pt-3">
           <Avatar

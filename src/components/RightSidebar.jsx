@@ -32,7 +32,7 @@ const RightSidebar = () => {
   const kisskiss = ["🐙", "🐦", "💼", "📧", "🌐"];
 
   return (
-    <aside className="w-64 bg-slate-900/50 border-l border-slate-800 p-4 h-screen overflow-y-auto sticky top-0">
+    <aside className="bg-slate-900/50 border-l border-slate-800 p-4 h-screen sticky top-0">
       <div className="mb-4">
         <h3 className="text-white text-sm mb-2.5 flex items-center gap-1.5">
           <span className="text-emerald-400 text-sm">⚡</span>
@@ -173,3 +173,4 @@ const RightSidebar = () => {
 };
 
 export default RightSidebar;
+top - 0;
