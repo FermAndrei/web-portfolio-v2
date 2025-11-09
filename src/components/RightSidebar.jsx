@@ -156,8 +156,8 @@ const RightSidebar = () => {
         </div>
 
         <div className="p-3 border-t border-slate-800 mt-auto">
-          <h3 className="text-white text-sm mb-2.5 flex items-center gap-1.5">
-            <span className="text-emerald-400 text-sm">📧</span>
+          <h3 className="text-white text-base font-semibold mb-2.5 flex items-center gap-1.5">
+            <span className="text-emerald-400 text-base">📧</span>
             Get in touch
           </h3>
           <p className="text-slate-400 text-xs mb-3 leading-relaxed">
