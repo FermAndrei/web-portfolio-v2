@@ -26,11 +26,11 @@ const MainContent = () => {
                   {shortDay}, {year} {monthName} {day}
                 </span>
               </div>
-              <h1 className="text-white text-3xl mb-2">
+              <h1 className="text-white text-4xl mb-2">
                 Crafting Digital{" "}
                 <span className="text-emerald-400">Excellence</span>
               </h1>
-              <p className="text-slate-300 text-xs max-w-xl">
+              <p className="text-slate-300 text-base max-w-xl">
                 Transforming ideas into scalable, high-performance applications
                 with modern technologies
               </p>
@@ -40,8 +40,8 @@ const MainContent = () => {
       </div>
       <div className="mb-5">
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-emerald-400 text-sm">📊</span>
-          <h2 className="text-white text-sm">Career Stats</h2>
+          <span className="text-emerald-400 text-xl">📊</span>
+          <h2 className="text-white text-xl font-semibold">Career Stats</h2>
         </div>
         <div className="grid grid-cols-4 gap-3">
           {[
@@ -79,8 +79,8 @@ const MainContent = () => {
               >
                 {stat.icon}
               </div>
-              <div className="text-xl text-white mb-0.5">{stat.value}</div>
-              <div className="text-xs text-slate-400">{stat.label}</div>
+              <div className="text-2xl text-white mb-0.5">{stat.value}</div>
+              <div className="text-base text-slate-400">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -88,15 +88,12 @@ const MainContent = () => {
       <div className="mb-5" id="about">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
-            <span className="text-emerald-400 text-sm">👨‍💻</span>
-            <h2 className="text-white text-sm">About</h2>
+            <span className="text-emerald-400 text-xl">👨‍💻</span>
+            <h2 className="text-white text-xl font-semibold">About</h2>
           </div>
-          <button className="text-emerald-400 text-xs hover:text-emerald-300">
-            More →
-          </button>
         </div>
         <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
-          <p className="text-slate-300 text-xs leading-relaxed">
+          <p className="text-slate-300 text-base leading-relaxed">
             I'm a developer with 2 years of experience in front-end, web, and
             app development. I enjoy turning ideas into real projects that
             people can use and appreciate. Always curious and eager to learn,
@@ -108,12 +105,9 @@ const MainContent = () => {
       <div className="mb-5" id="experience">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
-            <span className="text-emerald-400 text-sm">💼</span>
-            <h2 className="text-white text-sm">Experience</h2>
+            <span className="text-emerald-400 text-xl">💼</span>
+            <h2 className="text-white text-xl font-semibold">Experience</h2>
           </div>
-          <button className="text-emerald-400 text-xs hover:text-emerald-300">
-            More →
-          </button>
         </div>
         <div className="space-y-2">
           {[
@@ -126,7 +120,7 @@ const MainContent = () => {
             {
               title: "Web Developer",
               company: "iRely",
-              period: "APR 2023 - May 2023",
+              period: "APR 2023 - MAY 2023",
               current: false,
             },
           ].map((exp, index) => (
@@ -140,19 +134,19 @@ const MainContent = () => {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <h3 className="text-white text-sm">{exp.title}</h3>
+                    <h3 className="text-white text-base">{exp.title}</h3>
                     <Badge
                       variant="outline"
                       className={`${
                         exp.current
                           ? "bg-emerald-600/20 border-emerald-500/30 text-emerald-400"
                           : "border-slate-600 text-slate-400"
-                      } text-xs px-2 py-0`}
+                      } text-sm px-2 py-0`}
                     >
                       {exp.period}
                     </Badge>
                   </div>
-                  <p className="text-slate-400 text-xs">{exp.company}</p>
+                  <p className="text-slate-400 text-sm">{exp.company}</p>
                 </div>
               </div>
             </div>
@@ -161,8 +155,8 @@ const MainContent = () => {
       </div>
       <div className="mb-5" id="projects">
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-emerald-400 text-sm">⭐</span>
-          <h2 className="text-white text-sm">Featured</h2>
+          <span className="text-emerald-400 text-xl">⭐</span>
+          <h2 className="text-white text-xl font-semibold">Projects</h2>
         </div>
         <div className="grid grid-cols-4 gap-3">
           {[
@@ -210,13 +204,13 @@ const MainContent = () => {
                 </div>
               </div>
               <div className="p-2.5">
-                <h3 className="text-white text-xs mb-1.5 line-clamp-2 leading-tight">
+                <h3 className="text-white text-base mb-1.5 line-clamp-2 leading-tight">
                   {project.title}
                 </h3>
                 <div className="flex items-center justify-between">
                   <Badge
                     variant="outline"
-                    className="border-emerald-500/30 text-emerald-400 text-xs px-1.5 py-0"
+                    className="border-emerald-500/30 text-emerald-400 text-sm py-0"
                   >
                     {project.type}
                   </Badge>
@@ -229,8 +223,8 @@ const MainContent = () => {
       </div>
       <div className="mb-5">
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-emerald-400 text-sm">🛠️</span>
-          <h2 className="text-white text-sm">Tech Stack</h2>
+          <span className="text-emerald-400 text-xl">🛠️</span>
+          <h2 className="text-white text-xl semi-bold">Tech Stack</h2>
         </div>
         <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
           <div className="flex flex-wrap gap-1.5">
@@ -259,7 +253,7 @@ const MainContent = () => {
             ].map((tech, index) => (
               <Badge
                 key={index}
-                className={`bg-linear-to-r ${tech.color} text-white border-0 px-2.5 py-1 text-xs hover:scale-105 transition-transform`}
+                className={`bg-linear-to-r ${tech.color} text-white border-0 px-2.5 py-1 text-base hover:scale-105 transition-transform`}
               >
                 {tech.name}
               </Badge>

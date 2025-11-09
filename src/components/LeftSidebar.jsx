@@ -21,7 +21,6 @@ export function LeftSidebar({ activeSection = "home" }) {
     { id: "about", icon: User, label: "About" },
     { id: "achievements", icon: Trophy, label: "Achievements" },
     { id: "projects", icon: Code, label: "Projects" },
-    { id: "blog", icon: FileText, label: "Blog" },
   ];
   const year = new Date().getFullYear();
 
@@ -34,13 +33,13 @@ export function LeftSidebar({ activeSection = "home" }) {
             src="/static/images/avatar/1.jpg"
             sx={{
               bgcolor: deepOrange[500],
-              width: 56,
-              height: 56,
+              width: 80,
+              height: 80,
             }}
           />
-          <h2 className="text-sm mb-0.5">Ferm Andrei V. Trillana</h2>
-          <p className="text-xs mb-1 text-[#34d399]">Frontend Developer</p>
-          <div className="flex items-center gap-1 text-xs text-slate-400">
+          <h2 className="text-xl font-bold pt-3">Ferm Andrei V. Trillana</h2>
+          <p className="text-base text-[#34d399]">Frontend Developer</p>
+          <div className="flex items-center gap-1 text-base text-slate-400">
             <MapPin className="w-3 h-3" />
             <span>Liliw, Laguna, PH</span>
           </div>
@@ -48,7 +47,15 @@ export function LeftSidebar({ activeSection = "home" }) {
 
         <div className="p-3">
           <Stack spacing={1}>
-            <Button variant="contained" color="primary" size="small" fullWidth>
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              fullWidth
+              sx={{
+                fontSize: "1rem",
+              }}
+            >
               Send Email
             </Button>
 
@@ -63,9 +70,10 @@ export function LeftSidebar({ activeSection = "home" }) {
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "6px",
+                  fontSize: "1rem",
                 }}
               >
-                <Download size={14} />
+                <Download size={16} />
                 Resume
               </Button>
 
@@ -79,9 +87,10 @@ export function LeftSidebar({ activeSection = "home" }) {
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "6px",
+                  fontSize: "1rem",
                 }}
               >
-                <CiLinkedin size={14} />
+                <CiLinkedin size={16} />
                 LinkedIn
               </Button>
             </Stack>
@@ -100,8 +109,8 @@ export function LeftSidebar({ activeSection = "home" }) {
                     : "text-slate-400 hover:bg-slate-800 hover:text-white"
                 }`}
               >
-                <item.icon className="w-3.5 h-3.5" />
-                <span className="text-xs">{item.label}</span>
+                <item.icon className="w-4 h-4" />
+                <span className="text-base">{item.label}</span>
               </a>
             ))}
           </div>
