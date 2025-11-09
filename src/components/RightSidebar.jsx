@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { Award } from "lucide-react";
+import { Award, PencilRuler, Target, Trophy, Mail } from "lucide-react";
 
 const RightSidebar = () => {
   const skillIcons = [
@@ -36,8 +36,7 @@ const RightSidebar = () => {
       <div className="flex flex-col h-full">
         <div className="p-3">
           <h3 className="text-white text-lg font-semibold mb-2.5 flex items-center gap-1.5">
-            <span className="text-emerald-400 text-lg">⚡</span>
-            Skill Set
+            <PencilRuler /> Skill Set
           </h3>
           <div className="grid grid-cols-4 gap-2">
             {skillIcons.map((skill, index) => (
@@ -54,8 +53,7 @@ const RightSidebar = () => {
 
         <div className="px-3">
           <h3 className="text-white text-lg font-semibold mb-2.5 flex items-center gap-1.5">
-            <span className="text-emerald-400 text-lg">🎯</span>
-            Expertise
+            <Target /> Expertise
           </h3>
           <Accordion>
             <AccordionSummary
@@ -63,13 +61,13 @@ const RightSidebar = () => {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              <Typography component="span">Accordion 1</Typography>
+              <Typography component="span">Web Development</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                I bring websites to life, making them look good and work
+                smoothly. Whether it's a business site or a personal page, I
+                ensure a sleek and user-friendly experience
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -79,13 +77,12 @@ const RightSidebar = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography component="span">Accordion 2</Typography>
+              <Typography component="span">UI/UX Design</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                I make things look cool and easy to use! Crafting visually
+                appealing and intuitive interfaces is my forte.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -95,29 +92,13 @@ const RightSidebar = () => {
               aria-controls="panel3-content"
               id="panel3-header"
             >
-              <Typography component="span">Accordion 3</Typography>
+              <Typography component="span">Mobile Development</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel4-content"
-              id="panel4-header"
-            >
-              <Typography component="span">Accordion 4</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                Your site on the go! I ensure websites work seamlessly on all
+                devices, providing a top-notch experience, whether on a desktop
+                or a smartphone.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -126,8 +107,7 @@ const RightSidebar = () => {
         <div className="p-3">
           <div className="flex items-center justify-between mb-2.5">
             <h3 className="text-white text-lg font-semibold flex items-center gap-1.5">
-              <span className="text-emerald-400 text-lg">🏆</span>
-              Certifications
+              <Trophy /> Certifications
             </h3>
             <button className="text-emerald-400 text-xs hover:text-emerald-300">
               More →
@@ -157,8 +137,7 @@ const RightSidebar = () => {
 
         <div className="p-3 border-t border-slate-800 mt-auto">
           <h3 className="text-white text-base font-semibold mb-2.5 flex items-center gap-1.5">
-            <span className="text-emerald-400 text-base">📧</span>
-            Get in touch
+            <Mail /> Get in touch
           </h3>
           <p className="text-slate-400 text-xs mb-3 leading-relaxed">
             Let's build something great together — feel free to reach out

@@ -1,6 +1,14 @@
-import { Calendar, CircleDot, ArrowUpRight } from "lucide-react";
+import {
+  Calendar,
+  CircleDot,
+  ArrowUpRight,
+  ChartBar,
+  SquareUserRound,
+  BriefcaseBusiness,
+  FolderGit2,
+  Cpu,
+} from "lucide-react";
 import Badge from "@mui/material/Badge";
-import MailIcon from "@mui/icons-material/Mail";
 
 const MainContent = () => {
   const date = new Date();
@@ -26,7 +34,7 @@ const MainContent = () => {
                   {shortDay}, {year} {monthName} {day}
                 </span>
               </div>
-              <h1 className="text-white text-4xl mb-2">
+              <h1 className="text-white text-4xl font-bold mb-2">
                 Crafting Digital{" "}
                 <span className="text-emerald-400">Excellence</span>
               </h1>
@@ -40,7 +48,7 @@ const MainContent = () => {
       </div>
       <div className="mb-5">
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-emerald-400 text-xl">📊</span>
+          <ChartBar />
           <h2 className="text-white text-xl font-semibold">Career Stats</h2>
         </div>
         <div className="grid grid-cols-4 gap-3">
@@ -88,7 +96,7 @@ const MainContent = () => {
       <div className="mb-5" id="about">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
-            <span className="text-emerald-400 text-xl">👨‍💻</span>
+            <SquareUserRound />{" "}
             <h2 className="text-white text-xl font-semibold">About</h2>
           </div>
         </div>
@@ -105,7 +113,7 @@ const MainContent = () => {
       <div className="mb-5" id="experience">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
-            <span className="text-emerald-400 text-xl">💼</span>
+            <BriefcaseBusiness />{" "}
             <h2 className="text-white text-xl font-semibold">Experience</h2>
           </div>
         </div>
@@ -155,7 +163,7 @@ const MainContent = () => {
       </div>
       <div className="mb-5" id="projects">
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-emerald-400 text-xl">⭐</span>
+          <FolderGit2 />{" "}
           <h2 className="text-white text-xl font-semibold">Projects</h2>
         </div>
         <div className="grid grid-cols-4 gap-3">
@@ -223,8 +231,7 @@ const MainContent = () => {
       </div>
       <div className="mb-5">
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-emerald-400 text-xl">🛠️</span>
-          <h2 className="text-white text-xl semi-bold">Tech Stack</h2>
+          <Cpu /> <h2 className="text-white text-xl semi-bold">Tech Stack</h2>
         </div>
         <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
           <div className="flex flex-wrap gap-1.5">
