@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -21,20 +21,42 @@ const RightSidebar = () => {
   ];
   const certifications = [
     {
-      title: "HackerRank on Gidzit's Code to Career",
-      date: "June 2023",
+      title: "UI/UX for Web and Mobile with Figma",
+      date: "Dec 2024",
     },
     {
-      title: "Titanium exercise Q3 2024",
-      date: "Sept 2024",
+      title: "JavaScript Essentials 1/2",
+      date: "Aug 2024",
+    },
+    {
+      title: "HTML/CSS Essentials",
+      date: "July 2024",
+    },
+    {
+      title: "Compute Cloud Service",
+      date: "March 2022",
+    },
+    {
+      title: "SAP Advance (Implementation & Support)",
+      date: "March 2021",
+    },
+    {
+      title: "SAP Advance (Logistics & Financials)",
+      date: "March 2021",
+    },
+    {
+      title: "Ethical Hacking",
+      date: "October 2019",
     },
   ];
   const kisskiss = ["🐙", "🐦", "💼", "📧", "🌐"];
 
+  const [showAll, setShowAll] = useState(false);
+  const visibleCerts = showAll ? certifications : certifications.slice(0, 2);
   return (
     <aside className="bg-slate-900/50 border-l border-slate-800 h-screen sticky top-0 overflow-y-scroll scrollbar-hide">
       <div className="flex flex-col h-full">
-        <div className="p-3">
+        <div className="p-4">
           <h3 className="text-white text-lg font-semibold mb-2.5 flex items-center gap-1.5">
             <PencilRuler /> Skill Set
           </h3>
@@ -51,7 +73,7 @@ const RightSidebar = () => {
           </div>
         </div>
 
-        <div className="px-3">
+        <div className="px-4">
           <h3 className="text-white text-lg font-semibold mb-2.5 flex items-center gap-1.5">
             <Target /> Expertise
           </h3>
@@ -109,12 +131,17 @@ const RightSidebar = () => {
             <h3 className="text-white text-lg font-semibold flex items-center gap-1.5">
               <Trophy /> Certifications
             </h3>
-            <button className="text-emerald-400 text-xs hover:text-emerald-300">
-              More →
-            </button>
+            {certifications.length > 2 && (
+              <button
+                className="text-emerald-400 text-xs hover:text-emerald-300"
+                onClick={() => setShowAll(!showAll)}
+              >
+                {showAll ? "Show Less" : "More"}
+              </button>
+            )}
           </div>
           <div className="space-y-2">
-            {certifications.map((cert, index) => (
+            {visibleCerts.map((cert, index) => (
               <div
                 key={index}
                 className="bg-slate-800/30 rounded-lg p-2.5 border border-slate-700/50 hover:bg-slate-800 transition-colors cursor-pointer group"

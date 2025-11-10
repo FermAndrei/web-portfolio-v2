@@ -3,9 +3,9 @@ import {
   CircleDot,
   ArrowUpRight,
   ChartBar,
-  SquareUserRound,
+  User,
   BriefcaseBusiness,
-  FolderGit2,
+  ChevronsLeftRight,
   Cpu,
 } from "lucide-react";
 import Badge from "@mui/material/Badge";
@@ -18,7 +18,7 @@ const MainContent = () => {
   const shortDay = date.toLocaleString("en-US", { weekday: "short" });
 
   return (
-    <div className="p-3">
+    <div className="p-4">
       <div className="relative rounded-xl overflow-hidden mb-5 h-48">
         <img
           src="https://images.unsplash.com/photo-1658806283210-6d7330062704?w=1200&h=400&fit=crop"
@@ -35,7 +35,7 @@ const MainContent = () => {
                 </span>
               </div>
               <h1 className="text-white text-4xl font-bold mb-2">
-                Crafting Digital{" "}
+                Crafting Digital
                 <span className="text-emerald-400">Excellence</span>
               </h1>
               <p className="text-slate-300 text-base max-w-xl">
@@ -55,19 +55,19 @@ const MainContent = () => {
           {[
             {
               icon: "🎯",
-              value: "2",
+              value: "2 Years",
               label: "Experience",
               color: "from-purple-500 to-pink-500",
             },
             {
               icon: "🏆",
-              value: "20",
+              value: "9",
               label: "Certificates",
               color: "from-amber-500 to-orange-500",
             },
             {
               icon: "💼",
-              value: "16",
+              value: "6",
               label: "Projects",
               color: "from-cyan-500 to-blue-500",
             },
@@ -96,7 +96,7 @@ const MainContent = () => {
       <div className="mb-5" id="about">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
-            <SquareUserRound />{" "}
+            <User />
             <h2 className="text-white text-xl font-semibold">About</h2>
           </div>
         </div>
@@ -163,7 +163,7 @@ const MainContent = () => {
       </div>
       <div className="mb-5" id="projects">
         <div className="flex items-center gap-1.5 mb-3">
-          <FolderGit2 />{" "}
+          <ChevronsLeftRight />
           <h2 className="text-white text-xl font-semibold">Projects</h2>
         </div>
         <div className="grid grid-cols-4 gap-3">
