@@ -83,25 +83,27 @@ const RightSidebar = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleCerts = showAll ? certifications : certifications.slice(0, 2);
   return (
-    <aside className="bg-slate-900/50 border-l border-slate-800 h-screen sticky top-0 overflow-y-scroll scrollbar-hide">
+    <aside className="lg:bg-slate-900/50 lg:border-l lg:w-80 border-slate-800 h-screen sticky top-0 lg:overflow-y-scroll scrollbar-hide">
       <div className="flex flex-col h-full">
+        {/* Skill Set */}
         <div className="p-4">
           <h3 className="text-white text-lg font-semibold mb-2.5 flex items-center gap-1.5">
             <PencilRuler /> Skill Set
           </h3>
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-4 gap-2">
             {skillIcons.map((skill, index) => (
               <div
                 key={index}
                 className="aspect-square bg-slate-800/50 rounded-lg flex items-center justify-center text-xl hover:bg-slate-800 transition-colors cursor-pointer border border-slate-700/50"
                 title={skill.name}
               >
-                <img src={skill.icon} alt={skill.name} className="p-4" />
+                <img src={skill.icon} alt={skill.name} className="p-2" />
               </div>
             ))}
           </div>
         </div>
 
+        {/* Expertise */}
         <div className="px-4">
           <h3 className="text-white text-lg font-semibold mb-2.5 flex items-center gap-1.5">
             <Target /> Expertise
@@ -157,6 +159,7 @@ const RightSidebar = () => {
           </div>
         </div>
 
+        {/* Certifications */}
         <div className="p-4">
           <div className="flex items-center justify-between mb-2.5">
             <h3 className="text-white text-lg font-semibold flex items-center gap-1.5">
@@ -193,6 +196,7 @@ const RightSidebar = () => {
           </div>
         </div>
 
+        {/* Get in touch */}
         <div className="p-4 border-t border-slate-800 mt-auto">
           <h3 className="text-white text-base font-semibold mb-2.5 flex items-center gap-1.5">
             <Mail /> Get in touch
