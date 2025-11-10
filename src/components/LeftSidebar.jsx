@@ -27,7 +27,7 @@ export function LeftSidebar({ activeSection = "home" }) {
   return (
     <aside className="bg-slate-900/50 border-r border-slate-800 flex flex-col h-screen sticky top-0">
       <div className="flex flex-col h-full bg-slate-900 text-white">
-        <div className="flex flex-col items-center text-center pt-3">
+        <div className="flex flex-col items-center text-center pt-4">
           <Avatar
             alt="Ferm Andrei"
             src="/static/images/avatar/1.jpg"
@@ -45,7 +45,7 @@ export function LeftSidebar({ activeSection = "home" }) {
           </div>
         </div>
 
-        <div className="p-3">
+        <div className="p-4">
           <Stack spacing={1}>
             <Button
               variant="contained"
@@ -97,7 +97,7 @@ export function LeftSidebar({ activeSection = "home" }) {
           </Stack>
         </div>
 
-        <nav className="p-3 border-b border-t border-slate-800">
+        <nav className="p-4 border-b border-t border-slate-800">
           <div className="space-y-0.5">
             {navItems.map((item) => (
               <a
@@ -116,7 +116,7 @@ export function LeftSidebar({ activeSection = "home" }) {
           </div>
         </nav>
 
-        <div className="p-3 border-t border-slate-800 mt-auto">
+        <div className="p-4 border-t border-slate-800 mt-auto">
           <div className="flex items-center justify-between mb-1.5">
             <span className="text-slate-400 text-xs">Dark Mode</span>
             <div className="w-9 h-5 bg-emerald-600 rounded-full relative cursor-pointer">

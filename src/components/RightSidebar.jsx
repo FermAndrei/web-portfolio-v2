@@ -10,14 +10,38 @@ import { Award, PencilRuler, Target, Trophy, Mail } from "lucide-react";
 
 const RightSidebar = () => {
   const skillIcons = [
-    { icon: "⚛️", name: "React" },
-    { icon: "🟢", name: "Vue" },
-    { icon: "⚡", name: "Next.js" },
-    { icon: "📘", name: "TypeScript" },
-    { icon: "🎨", name: "Tailwind" },
-    { icon: "🟩", name: "Node.js" },
-    { icon: "🔷", name: "Angular" },
-    { icon: "🎯", name: "Figma" },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      name: "React",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      name: "Javascript",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+      name: "Flutter",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
+      name: "Dart",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      name: "HTML",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      name: "Tailwind",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+      name: "Git",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+      name: "Figma",
+    },
   ];
   const certifications = [
     {
@@ -49,7 +73,12 @@ const RightSidebar = () => {
       date: "October 2019",
     },
   ];
-  const kisskiss = ["🐙", "🐦", "💼", "📧", "🌐"];
+  const kisskiss = [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg",
+    "/public/icons/64px-Gmail_icon_(2020).svg.png",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+  ];
 
   const [showAll, setShowAll] = useState(false);
   const visibleCerts = showAll ? certifications : certifications.slice(0, 2);
@@ -67,7 +96,7 @@ const RightSidebar = () => {
                 className="aspect-square bg-slate-800/50 rounded-lg flex items-center justify-center text-xl hover:bg-slate-800 transition-colors cursor-pointer border border-slate-700/50"
                 title={skill.name}
               >
-                {skill.icon}
+                <img src={skill.icon} alt={skill.name} className="p-4" />
               </div>
             ))}
           </div>
@@ -77,56 +106,58 @@ const RightSidebar = () => {
           <h3 className="text-white text-lg font-semibold mb-2.5 flex items-center gap-1.5">
             <Target /> Expertise
           </h3>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel1-content"
-              id="panel1-header"
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg overflow-hidden mb-2">
+            <Accordion
+              sx={{ backgroundColor: "transparent", boxShadow: "none" }}
             >
-              <Typography component="span">Web Development</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                I bring websites to life, making them look good and work
-                smoothly. Whether it's a business site or a personal page, I
-                ensure a sleek and user-friendly experience
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
+              <AccordionSummary
+                expandIcon={<ArrowDropDownIcon className="text-slate-500" />}
+              >
+                <Typography component="span">Web Development</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  I bring websites to life, making them look good and work
+                  smoothly. Whether it's a business site or a personal page, I
+                  ensure a sleek and user-friendly experience
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              sx={{ backgroundColor: "transparent", boxShadow: "none" }}
             >
-              <Typography component="span">UI/UX Design</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                I make things look cool and easy to use! Crafting visually
-                appealing and intuitive interfaces is my forte.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel3-content"
-              id="panel3-header"
+              <AccordionSummary
+                expandIcon={<ArrowDropDownIcon className="text-slate-500" />}
+              >
+                <Typography component="span">UI/UX Design</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  I make things look cool and easy to use! Crafting visually
+                  appealing and intuitive interfaces is my forte.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              sx={{ backgroundColor: "transparent", boxShadow: "none" }}
             >
-              <Typography component="span">Mobile Development</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Your site on the go! I ensure websites work seamlessly on all
-                devices, providing a top-notch experience, whether on a desktop
-                or a smartphone.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
+              <AccordionSummary
+                expandIcon={<ArrowDropDownIcon className="text-slate-500" />}
+              >
+                <Typography component="span">Mobile Development</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Your site on the go! I ensure websites work seamlessly on all
+                  devices, providing a top-notch experience, whether on a
+                  desktop or a smartphone.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
         </div>
 
-        <div className="p-3">
+        <div className="p-4">
           <div className="flex items-center justify-between mb-2.5">
             <h3 className="text-white text-lg font-semibold flex items-center gap-1.5">
               <Trophy /> Certifications
@@ -162,7 +193,7 @@ const RightSidebar = () => {
           </div>
         </div>
 
-        <div className="p-3 border-t border-slate-800 mt-auto">
+        <div className="p-4 border-t border-slate-800 mt-auto">
           <h3 className="text-white text-base font-semibold mb-2.5 flex items-center gap-1.5">
             <Mail /> Get in touch
           </h3>
@@ -174,9 +205,9 @@ const RightSidebar = () => {
               <a
                 key={index}
                 href="#"
-                className="w-8 h-8 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors border border-slate-700/50"
+                className="w-8 h-8 bg-slate-800/85 rounded-lg flex items-center justify-center hover:bg-slate-600 transition-colors border border-slate-700/50"
               >
-                {emoji}
+                <img src={emoji} alt="" className="p-1" />
               </a>
             ))}
           </div>
