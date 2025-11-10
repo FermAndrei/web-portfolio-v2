@@ -236,31 +236,25 @@ const MainContent = () => {
         <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
           <div className="flex flex-wrap gap-1.5">
             {[
-              { name: "REACT", color: "from-cyan-500 to-blue-500" },
-              { name: "VUE", color: "from-green-500 to-emerald-500" },
-              { name: "NEXT.JS", color: "from-slate-600 to-gray-600" },
-              { name: "NUXT.JS", color: "from-green-600 to-teal-600" },
-              { name: "TYPESCRIPT", color: "from-blue-600 to-blue-700" },
-              { name: "JAVASCRIPT", color: "from-yellow-500 to-orange-500" },
-              { name: "TAILWIND CSS", color: "from-cyan-500 to-blue-600" },
-              { name: "BOOTSTRAP", color: "from-purple-600 to-purple-700" },
-              { name: "SCSS", color: "from-pink-500 to-rose-500" },
-              { name: "NODE.JS", color: "from-green-600 to-lime-600" },
-              { name: "MONGODB", color: "from-green-700 to-green-800" },
-              { name: "SUPABASE", color: "from-emerald-600 to-teal-600" },
-              { name: "MYSQL", color: "from-blue-700 to-cyan-700" },
-              { name: "AZURE DEVOPS", color: "from-blue-600 to-indigo-600" },
-              { name: "GIT", color: "from-orange-600 to-red-600" },
-              { name: "GITHUB", color: "from-gray-700 to-slate-700" },
-              { name: "JIRA", color: "from-blue-600 to-blue-700" },
-              { name: "SLACK", color: "from-purple-600 to-pink-600" },
-              { name: "TEAMS", color: "from-blue-600 to-purple-600" },
-              { name: "VS CODE", color: "from-blue-500 to-cyan-500" },
-              { name: "VISUAL STUDIO", color: "from-purple-600 to-blue-600" },
+              { name: "React", color: "from-cyan-500 to-blue-500" },
+              { name: "Flutter", color: "from-green-500 to-emerald-500" },
+              { name: "JavaScript", color: "from-slate-600 to-gray-600" },
+              { name: "Dart", color: "from-yellow-500 to-orange-500" },
+              { name: "Tailwind", color: "from-green-600 to-teal-600" },
+              { name: "Bootstrap", color: "from-blue-600 to-blue-700" },
+              { name: "Figma", color: "from-yellow-500 to-orange-500" },
+              { name: "GIT", color: "from-cyan-500 to-blue-600" },
+              { name: "GitHub", color: "from-purple-600 to-purple-700" },
+              { name: "VS Code", color: "from-pink-500 to-rose-500" },
+              { name: "Android Studio", color: "from-green-600 to-lime-600" },
+              { name: "Vite", color: "from-pink-500 to-rose-500" },
+              { name: "Material UI", color: "from-emerald-600 to-teal-600" },
+              { name: "Lucide", color: "from-blue-700 to-cyan-700" },
+              { name: "Canva", color: "from-purple-600 to-purple-700" },
             ].map((tech, index) => (
               <Badge
                 key={index}
-                className={`bg-linear-to-r ${tech.color} text-white border-0 px-2.5 py-1 text-base hover:scale-105 transition-transform`}
+                className={`bg-linear-to-r ${tech.color} text-white border-0 rounded-md px-2.5 py-1 text-base hover:scale-105 transition-transform`}
               >
                 {tech.name}
               </Badge>
