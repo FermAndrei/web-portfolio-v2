@@ -59,7 +59,7 @@ function App() {
       <div className="flex-1">
         <MainContent />
       </div>
-      <div className="lg:w-80">
+      <div className="lg:w-64">
         <RightSidebar />
       </div>
     </div>
