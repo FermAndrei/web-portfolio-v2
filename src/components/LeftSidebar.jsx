@@ -1,18 +1,7 @@
 import Avatar from "@mui/material/Avatar";
 import { deepOrange } from "@mui/material/colors";
 import { Button, Stack } from "@mui/material";
-import {
-  MapPin,
-  Download,
-  Mail,
-  Home,
-  User,
-  Trophy,
-  Briefcase,
-  Code,
-  FileText,
-  Moon,
-} from "lucide-react";
+import { MapPin, Download, Home, User, Trophy, Code } from "lucide-react";
 import { CiLinkedin } from "react-icons/ci";
 
 export function LeftSidebar({ activeSection = "home" }) {
@@ -25,7 +14,7 @@ export function LeftSidebar({ activeSection = "home" }) {
   const year = new Date().getFullYear();
 
   return (
-    <aside className="bg-slate-900/50 border-r border-slate-800 flex flex-col h-screen sticky top-0">
+    <aside className="bg-slate-900/50 border-r border-slate-800 flex flex-col h-screen sticky top-0 ">
       <div className="flex flex-col h-full bg-slate-900 text-white">
         <div className="flex flex-col items-center text-center pt-4">
           <Avatar
@@ -37,7 +26,9 @@ export function LeftSidebar({ activeSection = "home" }) {
               height: 80,
             }}
           />
-          <h2 className="text-xl font-bold pt-3">Ferm Andrei V. Trillana</h2>
+          <h2 className="text-xl font-bold pt-3 px-3">
+            Ferm Andrei V. Trillana
+          </h2>
           <p className="text-base text-[#34d399]">Frontend Developer</p>
           <div className="flex items-center gap-1 text-base text-slate-400">
             <MapPin className="w-3 h-3" />
@@ -50,7 +41,6 @@ export function LeftSidebar({ activeSection = "home" }) {
             <Button
               variant="contained"
               color="primary"
-              size="small"
               fullWidth
               sx={{
                 fontSize: "1rem",
@@ -63,7 +53,6 @@ export function LeftSidebar({ activeSection = "home" }) {
               <Button
                 variant="outlined"
                 color="primary"
-                size="small"
                 fullWidth
                 sx={{
                   display: "flex",
@@ -80,7 +69,6 @@ export function LeftSidebar({ activeSection = "home" }) {
               <Button
                 variant="outlined"
                 color="primary"
-                size="small"
                 fullWidth
                 sx={{
                   display: "flex",

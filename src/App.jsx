@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-slate-950">
-      <div className="hidden lg:block">
+      <div className="hidden lg:block min-w-58 w-80">
         <LeftSidebar />
       </div>
       <div className="block lg:hidden">
@@ -59,7 +59,7 @@ function App() {
       <div className="flex-1">
         <MainContent />
       </div>
-      <div className="lg:w-64">
+      <div className="">
         <RightSidebar />
       </div>
     </div>

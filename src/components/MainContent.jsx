@@ -18,8 +18,7 @@ const MainContent = () => {
   const shortDay = date.toLocaleString("en-US", { weekday: "short" });
 
   return (
-    <div className="w-full p-2 sm:p-3 md:p-4">
-      {/* Banner */}
+    <div className="p-2 sm:p-3 md:p-4">
       <div className="relative rounded-xl overflow-hidden mb-5 h-48">
         <img
           src="https://images.unsplash.com/photo-1658806283210-6d7330062704?w=1200&h=400&fit=crop"
@@ -47,7 +46,6 @@ const MainContent = () => {
           </div>
         </div>
       </div>
-
       {/* Career Stats */}
       <div className="mb-5">
         <div className="flex items-center gap-1.5 mb-3">
@@ -96,7 +94,6 @@ const MainContent = () => {
           ))}
         </div>
       </div>
-
       {/* about */}
       <div className="mb-5" id="about">
         <div className="flex items-center justify-between mb-3">
@@ -115,7 +112,6 @@ const MainContent = () => {
           </p>
         </div>
       </div>
-
       {/* Experience */}
       <div className="mb-5" id="experience">
         <div className="flex items-center justify-between mb-3">
