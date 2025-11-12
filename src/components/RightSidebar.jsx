@@ -83,7 +83,7 @@ const RightSidebar = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleCerts = showAll ? certifications : certifications.slice(0, 2);
   return (
-    <aside className="flex min-w-50 max-w-80 py-4 pr-4 h-screen sticky top-0 ">
+    <aside className="flex lg:min-w-50 lg:max-w-80 lg:py-4 lg:mr-4 mx-2 lg:mx-0 pb-4 h-screen sticky top-0 ">
       <div className="flex flex-col h-full rounded-2xl bg-slate-900/50 border border-slate-800 overflow-y-auto scrollbar-hide">
         {/* Skill Set */}
         <div className="p-4">

@@ -18,8 +18,8 @@ const MainContent = () => {
   const shortDay = date.toLocaleString("en-US", { weekday: "short" });
 
   return (
-    <div className="p-4 lg:h-screen ">
-      <div className="p-4 h-full rounded-2xl bg-slate-900/50 border border-slate-800 lg:overflow-y-auto scrollbar-hide">
+    <div className="p-2 lg:p-4 lg:h-screen ">
+      <div className="p-3 h-full rounded-2xl bg-slate-900/50 border border-slate-800 lg:overflow-y-auto scrollbar-hide">
         <div className="relative rounded-xl overflow-hidden mb-5 h-48">
           <img
             src="https://images.unsplash.com/photo-1658806283210-6d7330062704?w=1200&h=400&fit=crop"

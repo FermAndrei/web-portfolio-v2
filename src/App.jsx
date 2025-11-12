@@ -23,7 +23,7 @@ function App() {
       <div className="hidden lg:block min-w-58 w-80">
         <LeftSidebar />
       </div>
-      <div className="block lg:hidden">
+      <div className="block lg:hidden sticky top-0 z-1">
         <Box>
           <AppBar position="static" sx={{ backgroundColor: "#0f172a" }}>
             <Toolbar sx={{ justifyContent: "space-between" }}>
