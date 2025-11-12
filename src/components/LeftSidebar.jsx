@@ -15,7 +15,7 @@ export function LeftSidebar({ activeSection = "home" }) {
 
   return (
     <aside className=" flex flex-col h-screen sticky top-0 ">
-      <div className="flex flex-col bg-slate-900/50 ml-4 my-4 rounded-2xl border border-slate-800 h-full text-white">
+      <div className="flex flex-col bg-slate-900/50 lg:ml-4 lg:my-4 rounded-2xl border border-slate-800 h-full text-white">
         <div className="flex flex-col items-center text-center pt-4">
           <Avatar
             alt="Ferm Andrei"
