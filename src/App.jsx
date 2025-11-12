@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-slate-950">
+    <div className="flex flex-col lg:flex-row bg-slate-950 xl:max-w-[1910px] xl:mx-auto">
       <div className="hidden lg:block min-w-58 w-80">
         <LeftSidebar />
       </div>
