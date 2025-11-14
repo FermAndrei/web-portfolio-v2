@@ -156,20 +156,22 @@ const MainContent = () => {
                     <CircleDot className="w-3.5 h-3.5 text-emerald-400" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-start justify-between gap-2 mb-1">
-                      <h3 className="text-white text-base">{exp.title}</h3>
+                    <div className="flex flex-col sm:flex-row justify-between mb-1">
+                      <div>
+                        <h3 className="text-white text-lg">{exp.title}</h3>
+                        <p className="text-slate-400 text-sm">{exp.company}</p>
+                      </div>
                       <Badge
                         variant="outline"
                         className={`${
                           exp.current
-                            ? "bg-emerald-600/20 border-emerald-500/30 text-emerald-400"
-                            : "border-slate-600 text-slate-400"
-                        } text-sm px-2 py-0`}
+                            ? "bg-emerald-600/20 border-emerald-500/30 items-end text-emerald-400"
+                            : "border-slate-600 items-start text-slate-400"
+                        } text-sm py-0`}
                       >
                         {exp.period}
                       </Badge>
                     </div>
-                    <p className="text-slate-400 text-sm">{exp.company}</p>
                     <p className="whitespace-pre-line">
                       <ExpandableText description={100}>
                         {exp.desc}
