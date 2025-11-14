@@ -170,7 +170,7 @@ const RightSidebar = () => {
                 className="text-emerald-400 text-xs hover:text-emerald-300"
                 onClick={() => setShowAll(!showAll)}
               >
-                {showAll ? "Show Less" : "More"}
+                {showAll ? "Show less" : "Show more"}
               </button>
             )}
           </div>

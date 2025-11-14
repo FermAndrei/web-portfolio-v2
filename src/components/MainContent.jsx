@@ -9,6 +9,7 @@ import {
   Cpu,
 } from "lucide-react";
 import Badge from "@mui/material/Badge";
+import ExpandableText from "./ExpandableText";
 
 const MainContent = () => {
   const date = new Date();
@@ -20,7 +21,10 @@ const MainContent = () => {
   return (
     <div className="p-2 lg:p-4 lg:h-screen ">
       <div className="p-3 h-full rounded-2xl bg-slate-900/50 border border-slate-800 lg:overflow-y-auto scrollbar-hide">
-        <div className="relative rounded-xl overflow-hidden mb-5 h-48">
+        <div
+          className="relative rounded-xl overflow-hidden mb-5 h-48"
+          id="home"
+        >
           <img
             src="https://images.unsplash.com/photo-1658806283210-6d7330062704?w=1200&h=400&fit=crop"
             alt="Abstract technology background"
@@ -45,6 +49,27 @@ const MainContent = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* about */}
+        <div className="mb-5" id="about">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-1.5">
+              <User />
+              <h2 className="text-white text-xl font-semibold">About</h2>
+            </div>
+          </div>
+          <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
+            <p className="text-slate-300 text-base leading-relaxed">
+              <ExpandableText description={130}>
+                I'm a developer with 2 years of experience in front-end, web,
+                and app development. I enjoy turning ideas into real projects
+                that people can use and appreciate. Always curious and eager to
+                learn, I'm excited to grow my skills and be part of teams that
+                build something meaningful.
+              </ExpandableText>
+            </p>
           </div>
         </div>
 
@@ -97,25 +122,6 @@ const MainContent = () => {
           </div>
         </div>
 
-        {/* about */}
-        <div className="mb-5" id="about">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-1.5">
-              <User />
-              <h2 className="text-white text-xl font-semibold">About</h2>
-            </div>
-          </div>
-          <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
-            <p className="text-slate-300 text-base leading-relaxed">
-              I'm a developer with 2 years of experience in front-end, web, and
-              app development. I enjoy turning ideas into real projects that
-              people can use and appreciate. Always curious and eager to learn,
-              I'm excited to grow my skills and be part of teams that build
-              something meaningful.
-            </p>
-          </div>
-        </div>
-
         {/* Experience */}
         <div className="mb-5" id="experience">
           <div className="flex items-center justify-between mb-3">
@@ -130,12 +136,14 @@ const MainContent = () => {
                 title: "Application Developer",
                 company: "FDS Asya Philippines",
                 period: "FEB 2024 - SEP 2025",
+                desc: `Enhanced application features based on business requirements and integrated API endpoints for loan processing. \nImplemented caching that increased app load speed by 22%, resulting in a smoother startup experience, Developed an e-KYC feature to strengthen user verification.`,
                 current: false,
               },
               {
                 title: "Web Developer",
                 company: "iRely",
                 period: "APR 2023 - MAY 2023",
+                desc: "Built a CRUD web application using Sencha EXT JS, applying the MVVC architecture throughout the project. This gave me practical experience in frontend development and working with a JavaScript framework.\n I handled data management, user interactions, and UI component implementation while also collaborating with another trainee to debug, test, and refine the application's features.",
                 current: false,
               },
             ].map((exp, index) => (
@@ -162,6 +170,11 @@ const MainContent = () => {
                       </Badge>
                     </div>
                     <p className="text-slate-400 text-sm">{exp.company}</p>
+                    <p className="whitespace-pre-line">
+                      <ExpandableText description={100}>
+                        {exp.desc}
+                      </ExpandableText>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -176,7 +189,6 @@ const MainContent = () => {
             <h2 className="text-white text-xl font-semibold">Projects</h2>
           </div>
 
-          {/* Scrollable container */}
           <div className="lg:w-[500px] xl:w-[700px] 2xl:w-[1000px] overflow-x-auto scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-900">
             <div className="flex gap-3 flex-nowrap">
               {[

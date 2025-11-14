@@ -4,11 +4,10 @@ import { Button, Stack } from "@mui/material";
 import { MapPin, Download, Home, User, Trophy, Code } from "lucide-react";
 import { CiLinkedin } from "react-icons/ci";
 
-export function LeftSidebar({ activeSection = "home" }) {
+export function LeftSidebar({ activeSection = "home", onNavigate }) {
   const navItems = [
     { id: "home", icon: Home, label: "Home" },
     { id: "about", icon: User, label: "About" },
-    { id: "achievements", icon: Trophy, label: "Achievements" },
     { id: "projects", icon: Code, label: "Projects" },
   ];
   const year = new Date().getFullYear();
@@ -88,10 +87,10 @@ export function LeftSidebar({ activeSection = "home" }) {
         <nav className="p-4 border-b border-t border-slate-800">
           <div className="space-y-0.5">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.id}
-                href={`#${item.id}`}
-                className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg transition-colors ${
+                onClick={() => onNavigate(item.id)}
+                className={`flex items-center w-full gap-2 px-2.5 py-1.5 rounded-lg transition-colors ${
                   activeSection === item.id
                     ? "bg-emerald-600/20 text-emerald-400"
                     : "text-slate-400 hover:bg-slate-800 hover:text-white"
@@ -99,7 +98,7 @@ export function LeftSidebar({ activeSection = "home" }) {
               >
                 <item.icon className="w-4 h-4" />
                 <span className="text-base">{item.label}</span>
-              </a>
+              </button>
             ))}
           </div>
         </nav>
