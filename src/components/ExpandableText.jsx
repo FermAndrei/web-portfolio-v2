@@ -8,15 +8,17 @@ const ExpandableText = ({ children, description }) => {
   };
 
   return (
-    <div>
+    <>
       <p className="text">
         {isExpanted ? fullText : `${fullText.slice(0, description)}...`}
-        <br />
+        <span>
+          <br />
+        </span>
         <span onClick={toggleText} className="text-emerald-400 text-sm ">
           {isExpanted ? "Show less" : "Show more"}
         </span>
       </p>
-    </div>
+    </>
   );
 };
 

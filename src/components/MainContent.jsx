@@ -61,7 +61,7 @@ const MainContent = () => {
             </div>
           </div>
           <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
-            <p className="text-slate-300 text-base leading-relaxed">
+            <div className="text-slate-300 text-base leading-relaxed">
               <ExpandableText description={130}>
                 I'm a developer with 2 years of experience in front-end, web,
                 and app development. I enjoy turning ideas into real projects
@@ -69,7 +69,7 @@ const MainContent = () => {
                 learn, I'm excited to grow my skills and be part of teams that
                 build something meaningful.
               </ExpandableText>
-            </p>
+            </div>
           </div>
         </div>
 
@@ -172,11 +172,11 @@ const MainContent = () => {
                         {exp.period}
                       </Badge>
                     </div>
-                    <p className="whitespace-pre-line">
+                    <div className="whitespace-pre-line">
                       <ExpandableText description={100}>
                         {exp.desc}
                       </ExpandableText>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
