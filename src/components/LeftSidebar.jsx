@@ -1,8 +1,7 @@
 import Avatar from "@mui/material/Avatar";
 import { deepOrange } from "@mui/material/colors";
 import { Button, Stack } from "@mui/material";
-import { MapPin, Download, Home, User, Trophy, Code } from "lucide-react";
-import { CiLinkedin } from "react-icons/ci";
+import { MapPin, Home, User, Code } from "lucide-react";
 
 export function LeftSidebar({ activeSection = "home", onNavigate }) {
   const navItems = [
@@ -61,7 +60,6 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
                   fontSize: "1rem",
                 }}
               >
-                <Download size={16} />
                 Resume
               </Button>
 
@@ -77,7 +75,6 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
                   fontSize: "1rem",
                 }}
               >
-                <CiLinkedin size={16} />
                 LinkedIn
               </Button>
             </Stack>

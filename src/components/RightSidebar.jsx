@@ -76,7 +76,7 @@ const RightSidebar = () => {
   const kisskiss = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg",
-    "/public/icons/64px-Gmail_icon_(2020).svg.png",
+    "/icons/64px-Gmail_icon_(2020).svg.png",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
   ];
 
@@ -221,4 +221,3 @@ const RightSidebar = () => {
   );
 };
 export default RightSidebar;
-//
