@@ -57,12 +57,12 @@ const HomePage = () => {
         </div>
 
         {/* Experience */}
-        <div className="mb-5" id="experience">
+        <div className="mb-5">
           <Experience />
         </div>
 
         {/* Project */}
-        <div className="mb-5" id="projects">
+        <div className="mb-5">
           <Project />
         </div>
 
