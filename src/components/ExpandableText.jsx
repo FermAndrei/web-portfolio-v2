@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 
-const ExpandableText = ({ children, description }) => {
+const ExpandableText = ({ children, description, showToggle = true }) => {
   const fullText = children;
-  const [isExpanted, setIsExpanted] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const toggleText = () => {
-    setIsExpanted(!isExpanted);
+    setIsExpanded(!isExpanded);
   };
 
   return (
     <>
       <p className="text">
-        {isExpanted ? fullText : `${fullText.slice(0, description)}...`}
+        {isExpanded ? fullText : `${fullText.slice(0, description)}...`}
         <span>
           <br />
         </span>
-        <span onClick={toggleText} className="text-emerald-400 text-sm ">
-          {isExpanted ? "Show less" : "Show more"}
-        </span>
+        {showToggle && (
+          <>
+            <span
+              onClick={toggleText}
+              className="text-emerald-400 text-sm cursor-pointer"
+            >
+              {isExpanded ? "Show less" : "Show more"}
+            </span>
+          </>
+        )}
       </p>
     </>
   );
