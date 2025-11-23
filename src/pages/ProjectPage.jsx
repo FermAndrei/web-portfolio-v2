@@ -6,6 +6,10 @@ import ExpandableText from "../components/ExpandableText";
 const ProjectPage = () => {
   return (
     <div className="p-2 w-full h-auto">
+      <div className="flex items-center gap-1.5 mb-4 py-3 border-b border-slate-800">
+        <ChevronsLeftRight />
+        <h2 className="text-white text-xl font-semibold ">Projects</h2>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
         {ProjectData.map((project) => (
           <div

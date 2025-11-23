@@ -1,4 +1,5 @@
 import LeftSidebar from "../components/LeftSidebar";
+import RightSidebar from "../components/RightSidebar";
 import {
   AppBar,
   Box,
@@ -94,6 +95,9 @@ const MainLayout = () => {
         </Drawer>
       </div>
       <Outlet />
+      <div className="lg:w-80 min-w-58">
+        <RightSidebar />
+      </div>
     </div>
   );
 };

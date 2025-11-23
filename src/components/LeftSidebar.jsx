@@ -2,12 +2,13 @@ import Avatar from "@mui/material/Avatar";
 import { deepOrange } from "@mui/material/colors";
 import { Button, Stack } from "@mui/material";
 import { MapPin, Home, User, Code } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function LeftSidebar({ activeSection = "home", onNavigate }) {
   const navItems = [
-    { id: "home", icon: Home, label: "Home" },
-    { id: "about", icon: User, label: "About" },
-    { id: "projects", icon: Code, label: "Projects" },
+    { id: "home", icon: Home, label: "Home", path: "/" },
+    { id: "about", icon: User, label: "About", path: "/" },
+    { id: "projects", icon: Code, label: "Projects", path: "/projects" },
   ];
   const year = new Date().getFullYear();
 
@@ -84,8 +85,8 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
         <nav className="p-4 border-b border-t border-slate-800">
           <div className="space-y-0.5">
             {navItems.map((item) => (
-              <button
-                key={item.id}
+              <Link
+                to={item.path}
                 onClick={() => onNavigate(item.id)}
                 className={`flex items-center w-full gap-2 px-2.5 py-1.5 rounded-lg transition-colors ${
                   activeSection === item.id
@@ -95,7 +96,7 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
               >
                 <item.icon className="w-4 h-4" />
                 <span className="text-base">{item.label}</span>
-              </button>
+              </Link>
             ))}
           </div>
         </nav>

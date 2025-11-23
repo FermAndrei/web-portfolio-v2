@@ -1,4 +1,3 @@
-import RightSidebar from "../components/RightSidebar";
 import { Calendar } from "lucide-react";
 import About from "../components/About";
 import Career from "../components/Career";
@@ -70,10 +69,6 @@ const HomePage = () => {
         <div className="mb-5">
           <TechStack />
         </div>
-      </div>
-      {/* RIGHT SIDEBAR */}
-      <div className="lg:w-80 min-w-58">
-        <RightSidebar />
       </div>
     </div>
   );
