@@ -17,7 +17,7 @@ const Project = () => {
               key={project.id}
               className="bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer group shrink-0 w-40 sm:w-50 md:w-60"
             >
-              <Link to={`/projects/${project.name}`}>
+              <Link to={`/projects/${project.slug}`}>
                 <div className="relative h-24 overflow-hidden">
                   <img
                     src={project.tumbler}

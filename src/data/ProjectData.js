@@ -65,4 +65,10 @@ export const ProjectData = [
       "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
     date: "August 22",
   },
-];
+].map((item) => ({
+  ...item,
+  slug: item.name
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^a-z0-9-]/g, ""),
+}));
