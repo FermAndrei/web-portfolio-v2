@@ -2,8 +2,13 @@ import { ProjectData } from "../data/ProjectData";
 import { ArrowUpRight, ChevronsLeftRight } from "lucide-react";
 import ExpandableText from "../components/ExpandableText";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 const ProjectPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="p-3 lg:overflow-y-auto h-auto">
       <div className="flex items-center gap-1.5 mb-3 py-3 border-b border-slate-800">
