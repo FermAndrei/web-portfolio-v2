@@ -6,9 +6,15 @@ export const ProjectData = [
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
     link: "www.youtube.com",
     type: "Development",
-    tumbler:
+    thumbnail:
       "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    ],
     date: "August 22",
+    techUse: ["HTML", "HTML", "HTML", "HTML", "HTML"],
   },
   {
     id: 2,
@@ -17,9 +23,15 @@ export const ProjectData = [
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
     link: "www.youtube.com",
     type: "Development",
-    tumbler:
+    thumbnail:
       "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    ],
     date: "August 22",
+    techUse: ["TITE", "HTML", "HTML", "HTML", "HTML"],
   },
   {
     id: 3,
@@ -28,9 +40,15 @@ export const ProjectData = [
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
     link: "www.youtube.com",
     type: "Development",
-    tumbler:
+    thumbnail:
       "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    ],
     date: "August 22",
+    techUse: ["HTML", "HTML", "HTML", "HTML", "HTML"],
   },
   {
     id: 4,
@@ -39,9 +57,15 @@ export const ProjectData = [
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
     link: "www.youtube.com",
     type: "Development",
-    tumbler:
+    thumbnail:
       "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    ],
     date: "August 22",
+    techUse: ["HTML", "HTML", "HTML", "HTML", "HTML"],
   },
   {
     id: 5,
@@ -50,9 +74,15 @@ export const ProjectData = [
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
     link: "www.youtube.com",
     type: "Development",
-    tumbler:
+    thumbnail:
       "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    ],
     date: "August 22",
+    techUse: ["HTML", "HTML", "HTML", "HTML", "HTML"],
   },
   {
     id: 6,
@@ -61,9 +91,15 @@ export const ProjectData = [
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
     link: "www.youtube.com",
     type: "Development",
-    tumbler:
+    thumbnail:
       "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?w=300&h=200&fit=crop",
+    ],
     date: "August 22",
+    techUse: ["HTML", "HTML", "HTML", "HTML", "HTML"],
   },
 ].map((item) => ({
   ...item,
