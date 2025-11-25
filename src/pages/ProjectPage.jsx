@@ -1,6 +1,7 @@
 import { ProjectData } from "../data/ProjectData";
 import { ArrowUpRight, ChevronsLeftRight } from "lucide-react";
 import ExpandableText from "../components/ExpandableText";
+import { Link } from "react-router";
 
 const ProjectPage = () => {
   return (
@@ -20,24 +21,26 @@ const ProjectPage = () => {
             key={project.id}
             className="bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer group h-[350px] flex flex-col"
           >
-            <div className="relative h-60 overflow-hidden">
-              <img
-                src={project.tumbler}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-              <div className="absolute top-1.5 right-1.5 w-6 h-6 bg-slate-900/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <ArrowUpRight className="w-3 h-3 text-white" />
+            <Link to={`/projects/${project.slug}`}>
+              <div className="relative h-60 overflow-hidden">
+                <img
+                  src={project.thumbnail}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute top-1.5 right-1.5 w-6 h-6 bg-slate-900/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ArrowUpRight className="w-3 h-3 text-white" />
+                </div>
               </div>
-            </div>
 
-            <div className="p-3 flex flex-col gap-2 grow">
-              <h3 className="text-white text-lg font-bold line-clamp-2 leading-tight">
-                {project.name}
-              </h3>
-              <ExpandableText description={50} showToggle={false}>
-                {project.description}
-              </ExpandableText>
-            </div>
+              <div className="p-3 flex flex-col gap-2 grow">
+                <h3 className="text-white text-lg font-bold line-clamp-2 leading-tight">
+                  {project.name}
+                </h3>
+                <ExpandableText description={50} showToggle={false}>
+                  {project.description}
+                </ExpandableText>
+              </div>
+            </Link>
           </div>
         ))}
       </div>
