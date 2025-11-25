@@ -47,13 +47,12 @@ const MainLayout = () => {
   };
   return (
     <div className="flex flex-col lg:flex-row bg-slate-950 xl:max-w-[1887px] mx-auto">
-      <div className="hidden lg:block min-w-58 w-80">
+      <div className="hidden lg:block">
         <LeftSidebar
           activeSection={activeSection}
           onNavigate={handleScrollTo}
         />
       </div>
-
       <div className="block lg:hidden sticky top-0 z-10">
         <Box>
           <AppBar position="static" sx={{ backgroundColor: "#0f172a" }}>
@@ -95,7 +94,7 @@ const MainLayout = () => {
         </Drawer>
       </div>
       <Outlet />
-      <div className="lg:w-80 min-w-58">
+      <div>
         <RightSidebar />
       </div>
     </div>

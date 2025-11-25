@@ -12,8 +12,8 @@ const HomePage = () => {
   const shortDay = date.toLocaleString("en-US", { weekday: "short" });
 
   return (
-    <div className="flex flex-col lg:flex-row">
-      <div className="p-3 h-full lg:overflow-y-auto scrollbar-hide">
+    <div className="flex flex-col w-full lg:flex-row">
+      <div className="flex-1 p-3 h-full lg:overflow-y-auto scrollbar-hide">
         <div
           className="relative rounded-xl overflow-hidden mb-5 h-48"
           id="home"

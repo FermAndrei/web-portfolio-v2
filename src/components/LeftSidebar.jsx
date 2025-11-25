@@ -13,7 +13,7 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
   const year = new Date().getFullYear();
 
   return (
-    <aside className=" flex flex-col h-screen sticky top-0 ">
+    <aside className="lg:w-60 xl:w-70 flex flex-col h-screen sticky top-0 ">
       <div className="flex flex-col bg-slate-900/50 border border-slate-800 h-full text-white">
         <div className="flex flex-col items-center text-center pt-4">
           <Avatar
@@ -86,6 +86,7 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
           <div className="space-y-0.5">
             {navItems.map((item) => (
               <Link
+                key={item.id}
                 to={item.path}
                 onClick={() => onNavigate(item.id)}
                 className={`flex items-center w-full gap-2 px-2.5 py-1.5 rounded-lg transition-colors ${

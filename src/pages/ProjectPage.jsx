@@ -1,24 +1,26 @@
 import { ProjectData } from "../data/ProjectData";
 import { ArrowUpRight, ChevronsLeftRight } from "lucide-react";
-import Badge from "@mui/material/Badge";
 import ExpandableText from "../components/ExpandableText";
 
 const ProjectPage = () => {
   return (
-    <div className="p-2 w-full h-auto">
-      <div className="flex items-center gap-1.5 mb-4 py-3 border-b border-slate-800">
+    <div className="p-3 lg:overflow-y-auto h-auto">
+      <div className="flex items-center gap-1.5 mb-3 py-3 border-b border-slate-800">
         <ChevronsLeftRight />
-        <h2 className="text-white text-xl font-semibold ">Projects</h2>
+        <h2 className="text-white text-xl font-semibold">Projects</h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+      <p className="text-lg mb-3">
+        Here are some of the projects I’ve worked on throughout my development
+        journey. Each one reflects my commitment to learning, improving, and
+        building with impact.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
         {ProjectData.map((project) => (
           <div
             key={project.id}
-            className="bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden 
-      hover:border-emerald-500/50 transition-all cursor-pointer group
-      h-[200px] flex flex-col"
+            className="bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer group h-[350px] flex flex-col"
           >
-            <div className="relative h-28 overflow-hidden">
+            <div className="relative h-60 overflow-hidden">
               <img
                 src={project.tumbler}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -29,10 +31,9 @@ const ProjectPage = () => {
             </div>
 
             <div className="p-3 flex flex-col gap-2 grow">
-              <h3 className="text-white text-base line-clamp-2 leading-tight">
+              <h3 className="text-white text-lg font-bold line-clamp-2 leading-tight">
                 {project.name}
               </h3>
-
               <ExpandableText description={50} showToggle={false}>
                 {project.description}
               </ExpandableText>

@@ -1,4 +1,3 @@
-import React from "react";
 import ExpandableText from "./ExpandableText";
 import { User } from "lucide-react";
 

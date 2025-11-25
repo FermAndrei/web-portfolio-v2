@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -7,72 +7,10 @@ import {
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Award, PencilRuler, Target, Trophy, Mail } from "lucide-react";
+import { skillIcons } from "../data/SkillsIcons";
+import { certifications } from "../data/Certificate";
 
 const RightSidebar = () => {
-  const skillIcons = [
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      name: "React",
-    },
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-      name: "Javascript",
-    },
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
-      name: "Flutter",
-    },
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
-      name: "Dart",
-    },
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-      name: "HTML",
-    },
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-      name: "Tailwind",
-    },
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-      name: "Git",
-    },
-    {
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
-      name: "Figma",
-    },
-  ];
-  const certifications = [
-    {
-      title: "UI/UX for Web and Mobile with Figma",
-      date: "Dec 2024",
-    },
-    {
-      title: "JavaScript Essentials 1/2",
-      date: "Aug 2024",
-    },
-    {
-      title: "HTML/CSS Essentials",
-      date: "July 2024",
-    },
-    {
-      title: "Compute Cloud Service",
-      date: "March 2022",
-    },
-    {
-      title: "SAP Advance (Implementation & Support)",
-      date: "March 2021",
-    },
-    {
-      title: "SAP Advance (Logistics & Financials)",
-      date: "March 2021",
-    },
-    {
-      title: "Ethical Hacking",
-      date: "October 2019",
-    },
-  ];
   const kisskiss = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg",
@@ -83,7 +21,7 @@ const RightSidebar = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleCerts = showAll ? certifications : certifications.slice(0, 2);
   return (
-    <aside className="flex h-screen sticky top-0 ">
+    <aside className="lg:w-60 xl:w-70 flex h-screen sticky top-0 ">
       <div className="flex flex-col h-full bg-slate-900/50 border border-slate-800 overflow-y-auto scrollbar-hide">
         {/* Skill Set */}
         <div className="p-4">

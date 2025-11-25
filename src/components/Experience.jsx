@@ -1,4 +1,3 @@
-import React from "react";
 import { BriefcaseBusiness, CircleDot } from "lucide-react";
 import ExpandableText from "./ExpandableText";
 import Badge from "@mui/material/Badge";
