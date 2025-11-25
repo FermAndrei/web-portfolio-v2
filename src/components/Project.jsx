@@ -20,7 +20,7 @@ const Project = () => {
               <Link to={`/projects/${project.slug}`}>
                 <div className="relative h-24 overflow-hidden">
                   <img
-                    src={project.tumbler}
+                    src={project.thumbnail}
                     alt={project.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
