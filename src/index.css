@@ -29,3 +29,10 @@
   scrollbar-width: thin;
   scrollbar-color: #334155 #0f172a;
 }
+
+@media (max-width: 72.5rem) {
+  .my-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

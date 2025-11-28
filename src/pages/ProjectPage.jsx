@@ -20,7 +20,7 @@ const ProjectPage = () => {
         journey. Each one reflects my commitment to learning, improving, and
         building with impact.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 my-grid lg:grid-cols-3 gap-2">
         {ProjectData.map((project) => (
           <div
             key={project.id}
@@ -32,12 +32,12 @@ const ProjectPage = () => {
                   src={project.thumbnail}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute top-1.5 right-1.5 w-6 h-6 bg-slate-900/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-1.5 md:right-1.5 w-6 h-6 bg-slate-900/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <ArrowUpRight className="w-3 h-3 text-white" />
                 </div>
               </div>
 
-              <div className="p-3 flex flex-col gap-2 grow">
+              <div className="p-3 md:flex flex-col gap-2 grow">
                 <h3 className="text-white text-lg font-bold line-clamp-2 leading-tight">
                   {project.name}
                 </h3>

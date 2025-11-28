@@ -4,26 +4,29 @@ import { Button, Stack } from "@mui/material";
 import { MapPin, Home, User, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export function LeftSidebar({ activeSection = "home", onNavigate }) {
+export function LeftSidebar({ onNavigate, activeSection }) {
   const navItems = [
-    { id: "home", icon: Home, label: "Home", path: "/" },
-    { id: "about", icon: User, label: "About", path: "/" },
-    { id: "projects", icon: Code, label: "Projects", path: "/projects" },
+    { id: "home", icon: Home, label: "Home", path: "/", key: "home" },
+    { id: "about", icon: User, label: "About", path: "/", key: "about" },
+    {
+      id: "projects",
+      icon: Code,
+      label: "Projects",
+      path: "/projects",
+      key: "project",
+    },
   ];
   const year = new Date().getFullYear();
 
   return (
     <aside className="lg:w-60 xl:w-70 flex flex-col h-screen sticky top-0 ">
       <div className="flex flex-col bg-slate-900/50 border border-slate-800 h-full text-white">
+        {/* Avatar & Info */}
         <div className="flex flex-col items-center text-center pt-4">
           <Avatar
             alt="Ferm Andrei"
             src="/static/images/avatar/1.jpg"
-            sx={{
-              bgcolor: deepOrange[500],
-              width: 80,
-              height: 80,
-            }}
+            sx={{ bgcolor: deepOrange[500], width: 80, height: 80 }}
           />
           <h2 className="text-xl font-bold pt-3 px-3">
             Ferm Andrei V. Trillana
@@ -35,19 +38,17 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
           </div>
         </div>
 
+        {/* Buttons */}
         <div className="p-4">
           <Stack spacing={1}>
             <Button
               variant="contained"
               color="primary"
               fullWidth
-              sx={{
-                fontSize: "1rem",
-              }}
+              sx={{ fontSize: "1rem" }}
             >
               Send Email
             </Button>
-
             <Stack direction="row" spacing={1}>
               <Button
                 variant="outlined"
@@ -63,7 +64,6 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
               >
                 Resume
               </Button>
-
               <Button
                 variant="outlined"
                 color="primary"
@@ -82,6 +82,7 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
           </Stack>
         </div>
 
+        {/* Navigation */}
         <nav className="p-4 border-b border-t border-slate-800">
           <div className="space-y-0.5">
             {navItems.map((item) => (
@@ -102,6 +103,7 @@ export function LeftSidebar({ activeSection = "home", onNavigate }) {
           </div>
         </nav>
 
+        {/* Footer */}
         <div className="p-4 border-t border-slate-800 mt-auto">
           <div className="flex items-center justify-between mb-1.5">
             <span className="text-slate-400 text-xs">Dark Mode</span>
