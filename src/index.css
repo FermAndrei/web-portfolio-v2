@@ -30,21 +30,18 @@
   scrollbar-color: #334155 #0f172a;
 }
 
-/* Default: 1 column */
 .my-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 0.5rem; /* same as Tailwind gap-2 */
+  gap: 0.5rem;
 }
 
-/* SM to MD: 2 columns */
 @media (min-width: 700px) {
   .my-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* LG and above: 3 columns */
 @media (min-width: 1560px) {
   .my-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
