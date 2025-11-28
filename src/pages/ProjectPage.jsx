@@ -20,7 +20,7 @@ const ProjectPage = () => {
         journey. Each one reflects my commitment to learning, improving, and
         building with impact.
       </p>
-      <div className="grid grid-cols-1 my-grid lg:grid-cols-3 gap-2">
+      <div class="my-grid">
         {ProjectData.map((project) => (
           <div
             key={project.id}
