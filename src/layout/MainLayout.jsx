@@ -63,6 +63,8 @@ const MainLayout = () => {
     }
   }, [location.key]);
 
+  const [showViewer, setShowViewer] = useState(false);
+
   return (
     <div className="flex flex-col lg:flex-row bg-slate-950 xl:max-w-[1887px] mx-auto">
       {/* Desktop Sidebar */}
@@ -70,6 +72,7 @@ const MainLayout = () => {
         <LeftSidebar
           onNavigate={handleNavigate}
           activeSection={activeSection}
+          setShowViewer={setShowViewer}
         />
       </div>
 
@@ -103,6 +106,7 @@ const MainLayout = () => {
           <LeftSidebar
             onNavigate={handleNavigate}
             activeSection={activeSection}
+            setShowViewer={setShowViewer}
           />
         </Drawer>
       </div>

@@ -3,8 +3,10 @@ import { deepOrange } from "@mui/material/colors";
 import { Button, Stack } from "@mui/material";
 import { MapPin, Home, User, Code } from "lucide-react";
 import { Link } from "react-router-dom";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
-export function LeftSidebar({ onNavigate, activeSection }) {
+export function LeftSidebar({ onNavigate, activeSection, setShowViewer }) {
   const navItems = [
     { id: "home", icon: Home, label: "Home", path: "/", key: "home" },
     { id: "about", icon: User, label: "About", path: "/", key: "about" },
@@ -50,34 +52,38 @@ export function LeftSidebar({ onNavigate, activeSection }) {
               Send Email
             </Button>
             <Stack direction="row" spacing={1}>
-              <Button
-                variant="outlined"
-                color="primary"
-                fullWidth
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "6px",
-                  fontSize: "1rem",
-                }}
-              >
-                Resume
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                fullWidth
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "6px",
-                  fontSize: "1rem",
-                }}
-              >
-                LinkedIn
-              </Button>
+              <Link to={"/resume"} className="w-full">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  fullWidth
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "6px",
+                    fontSize: "1rem",
+                  }}
+                >
+                  Resume
+                </Button>
+              </Link>
+              <div className="w-full">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  fullWidth
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "6px",
+                    fontSize: "1rem",
+                  }}
+                >
+                  LinkedIn
+                </Button>
+              </div>
             </Stack>
           </Stack>
         </div>
