@@ -12,10 +12,22 @@ import { certifications } from "../data/Certificate";
 
 const RightSidebar = () => {
   const kisskiss = [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg",
-    "/icons/64px-Gmail_icon_(2020).svg.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
+      link: "https://www.linkedin.com/in/fermandrei/",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg",
+      link: "https://www.facebook.com/ferm.andrei",
+    },
+    {
+      icon: "/icons/64px-Gmail_icon_(2020).svg.png",
+      link: "https://mail.google.com/mail/?view=cm&to=fermandrei1@gmail.com",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+      link: "https://github.com/FermAndrei",
+    },
   ];
 
   const [showAll, setShowAll] = useState(false);
@@ -143,13 +155,14 @@ const RightSidebar = () => {
             Let's build something great together — feel free to reach out
           </p>
           <div className="flex gap-1.5">
-            {kisskiss.map((emoji, index) => (
+            {kisskiss.map((data, index) => (
               <a
                 key={index}
-                href="#"
+                href={data.link}
+                target="_blank"
                 className="w-8 h-8 bg-slate-800/85 rounded-lg flex items-center justify-center hover:bg-slate-600 transition-colors border border-slate-700/50"
               >
-                <img src={emoji} alt="" className="p-1" />
+                <img src={data.icon} alt="" className="p-1" />
               </a>
             ))}
           </div>

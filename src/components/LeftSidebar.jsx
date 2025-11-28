@@ -73,6 +73,8 @@ export function LeftSidebar({ onNavigate, activeSection, setShowViewer }) {
                   variant="outlined"
                   color="primary"
                   fullWidth
+                  href="https://www.linkedin.com/in/fermandrei/"
+                  target="_blank"
                   sx={{
                     display: "flex",
                     alignItems: "center",
