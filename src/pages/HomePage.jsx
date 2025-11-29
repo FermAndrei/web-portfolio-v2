@@ -4,6 +4,8 @@ import Career from "../components/Career";
 import Experience from "../components/Experience";
 import Project from "../components/Project";
 import TechStack from "../components/TechStack";
+import { MyInfo } from "../data/MyInfo";
+
 const HomePage = () => {
   const date = new Date();
   const year = date.getFullYear();
@@ -47,17 +49,17 @@ const HomePage = () => {
 
         {/* About */}
         <div className="mb-5" id="about">
-          <About />
+          <About info={MyInfo} />
         </div>
 
         {/* Career */}
         <div className="mb-5">
-          <Career />
+          <Career info={MyInfo.careerStats} />
         </div>
 
         {/* Experience */}
         <div className="mb-5">
-          <Experience />
+          <Experience info={MyInfo.experience} />
         </div>
 
         {/* Project */}
@@ -67,7 +69,7 @@ const HomePage = () => {
 
         {/* Tech Stack */}
         <div className="mb-5">
-          <TechStack />
+          <TechStack info={MyInfo.techStacks} />
         </div>
       </div>
     </div>

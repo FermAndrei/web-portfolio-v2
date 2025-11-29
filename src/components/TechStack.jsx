@@ -1,8 +1,7 @@
 import Badge from "@mui/material/Badge";
 import { Cpu } from "lucide-react";
-import { TechStacks } from "../data/TechStack";
 
-const TechStack = () => {
+const TechStack = ({ info }) => {
   return (
     <>
       <div className="flex items-center gap-1.5 mb-3">
@@ -10,7 +9,7 @@ const TechStack = () => {
       </div>
       <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
         <div className="flex flex-wrap gap-1.5">
-          {TechStacks.map((tech, index) => (
+          {info.map((tech, index) => (
             <Badge
               key={index}
               className={`bg-linear-to-r ${tech.color} text-white border-0 rounded-md px-2.5 py-1 text-base hover:scale-105 transition-transform`}

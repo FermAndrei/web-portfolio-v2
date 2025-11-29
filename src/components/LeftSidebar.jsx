@@ -5,8 +5,9 @@ import { MapPin, Home, User, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import { MyInfo } from "../data/MyInfo";
 
-export function LeftSidebar({ onNavigate, activeSection, setShowViewer }) {
+export function LeftSidebar({ onNavigate, activeSection }) {
   const navItems = [
     { id: "home", icon: Home, label: "Home", path: "/", key: "home" },
     { id: "about", icon: User, label: "About", path: "/", key: "about" },
@@ -26,21 +27,20 @@ export function LeftSidebar({ onNavigate, activeSection, setShowViewer }) {
         {/* Avatar & Info */}
         <div className="flex flex-col items-center text-center pt-4">
           <Avatar
-            alt="Ferm Andrei"
+            alt={MyInfo.firstName}
             src="/static/images/avatar/1.jpg"
             sx={{ bgcolor: deepOrange[500], width: 80, height: 80 }}
           />
           <h2 className="text-xl font-bold pt-3 px-3">
-            Ferm Andrei V. Trillana
+            {MyInfo.firstName} {MyInfo.middleName}. {MyInfo.lastName}
           </h2>
           <p className="text-base text-[#34d399]">Frontend Developer</p>
           <div className="flex items-center gap-1 text-base text-slate-400">
             <MapPin className="w-3 h-3" />
-            <span>Liliw, Laguna, PH</span>
+            <span>{MyInfo.address}</span>
           </div>
         </div>
-
-        {/* Buttons */}
+        ;{/* Buttons */}
         <div className="p-4">
           <Stack spacing={1}>
             <Button
@@ -89,7 +89,6 @@ export function LeftSidebar({ onNavigate, activeSection, setShowViewer }) {
             </Stack>
           </Stack>
         </div>
-
         {/* Navigation */}
         <nav className="p-4 border-b border-t border-slate-800">
           <div className="space-y-0.5">
@@ -110,7 +109,6 @@ export function LeftSidebar({ onNavigate, activeSection, setShowViewer }) {
             ))}
           </div>
         </nav>
-
         {/* Footer */}
         <div className="p-4 border-t border-slate-800 mt-auto">
           <div className="flex items-center justify-between mb-1.5">

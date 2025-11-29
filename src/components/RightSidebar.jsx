@@ -8,7 +8,7 @@ import {
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Award, PencilRuler, Target, Trophy, Mail } from "lucide-react";
 import { skillIcons } from "../data/SkillsIcons";
-import { certifications } from "../data/Certificate";
+import { MyInfo } from "../data/MyInfo";
 
 const RightSidebar = () => {
   const kisskiss = [
@@ -31,7 +31,9 @@ const RightSidebar = () => {
   ];
 
   const [showAll, setShowAll] = useState(false);
-  const visibleCerts = showAll ? certifications : certifications.slice(0, 2);
+  const visibleCerts = showAll
+    ? MyInfo.certificate
+    : MyInfo.certificate.slice(0, 2);
   return (
     <aside className="lg:w-60 xl:w-70 flex h-screen sticky top-0 ">
       <div className="flex flex-col h-full bg-slate-900/50 border border-slate-800 overflow-y-auto scrollbar-hide">
@@ -115,7 +117,7 @@ const RightSidebar = () => {
             <h3 className="text-white text-lg font-semibold flex items-center gap-1.5">
               <Trophy /> Certifications
             </h3>
-            {certifications.length > 2 && (
+            {MyInfo.certificate.length > 2 && (
               <button
                 className="text-emerald-400 text-xs hover:text-emerald-300"
                 onClick={() => setShowAll(!showAll)}

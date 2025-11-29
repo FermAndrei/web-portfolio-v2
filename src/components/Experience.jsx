@@ -2,7 +2,7 @@ import { BriefcaseBusiness, CircleDot } from "lucide-react";
 import ExpandableText from "./ExpandableText";
 import Badge from "@mui/material/Badge";
 
-const Experience = () => {
+const Experience = ({ info }) => {
   return (
     <>
       <div className="flex items-center justify-between mb-3">
@@ -12,22 +12,7 @@ const Experience = () => {
         </div>
       </div>
       <div className="space-y-2">
-        {[
-          {
-            title: "Application Developer",
-            company: "FDS Asya Philippines",
-            period: "FEB 2024 - SEP 2025",
-            desc: `Enhanced application features based on business requirements and integrated API endpoints for loan processing. \nImplemented caching that increased app load speed by 22%, resulting in a smoother startup experience, Developed an e-KYC feature to strengthen user verification.`,
-            current: false,
-          },
-          {
-            title: "Web Developer",
-            company: "iRely",
-            period: "APR 2023 - MAY 2023",
-            desc: "Built a CRUD web application using Sencha EXT JS, applying the MVVC architecture throughout the project. This gave me practical experience in frontend development and working with a JavaScript framework.\n I handled data management, user interactions, and UI component implementation while also collaborating with another trainee to debug, test, and refine the application's features.",
-            current: false,
-          },
-        ].map((exp, index) => (
+        {info.map((exp, index) => (
           <div
             key={index}
             className="bg-slate-800/30 border border-slate-700 rounded-xl p-3 hover:bg-slate-800/50 transition-colors"
