@@ -40,7 +40,7 @@ export function LeftSidebar({ onNavigate, activeSection }) {
             <span>{MyInfo.address}</span>
           </div>
         </div>
-        ;{/* Buttons */}
+        {/* Buttons */}
         <div className="p-4">
           <Stack spacing={1}>
             <Button
