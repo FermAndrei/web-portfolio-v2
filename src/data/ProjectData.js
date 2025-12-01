@@ -30,7 +30,7 @@ export const ProjectData = [
     id: 1,
     name: "BiliGo",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+      "Biligo is an e-commerce web application built to enhance my React development skills, focusing on API fetching, state management, and UI design. Customers can browse products, view item details, and add items to their cart for a smooth shopping experience. Developed using React.js, Axios for API handling, React Router for client-side navigation, and Tailwind CSS for fast and responsive styling. Product data is powered by DummyJSON, making the app fully functional for testing and learning real-world e-commerce flows.",
     link: "https://biligo.vercel.app",
     type: "E-Commerce",
     thumbnail: Biligo1,
@@ -39,6 +39,7 @@ export const ProjectData = [
     techUse: [
       "ReactJS",
       "Tailwind",
+      "Axios",
       "Vite",
       "DummyJson",
       "CSS",
@@ -50,7 +51,7 @@ export const ProjectData = [
     id: 2,
     name: "MeloVerse",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+      "MeloVerse is my first React project, created as a hands-on introduction to building components and understanding how React works. The website was also a practice ground for designing responsive user interfaces using Tailwind CSS, helping me learn how to structure layouts, style elements, and adapt designs across different screen sizes.",
     link: "www.youtube.com",
     type: "Landing Page",
     thumbnail: MeloVerse1,
@@ -62,7 +63,7 @@ export const ProjectData = [
     id: 3,
     name: "Web Porfolio",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+      "My first personal portfolio website I created to showcase my projects, skills, and UI design creativity. It highlights my ability to structure components, craft responsive layouts, and style interfaces using ReactJS and Tailwind CSS. The site also features smooth animations powered by the AOS (Animate On Scroll) Library, adding a dynamic and modern feel to the overall user experience.",
     link: "www.youtube.com",
     type: "Portfolio V1",
     thumbnail: WebPortV1,
@@ -74,7 +75,7 @@ export const ProjectData = [
     id: 4,
     name: "Web Porfolio V2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+      "Web Portfolio V2 is the enhanced version of my original portfolio website, featuring a cleaner structure and smoother navigation. This version integrates React Router for seamless routing between pages and uses JSON data to dynamically display my projects and personal information. Built with ReactJS and Tailwind CSS, it showcases improved UI design, responsiveness, and overall presentation of my work.",
     link: "www.youtube.com",
     type: "Portfolio V2",
     thumbnail:
@@ -91,7 +92,7 @@ export const ProjectData = [
     id: 5,
     name: "Emergency and Disaster Response Application",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+      "Emergency and Disaster Response Application for Nagcarlan, Laguna is a community-focused system developed for the Bureau of Fire Protection (BFP) Nagcarlan to strengthen disaster preparedness and response. The application provides real-time updates during emergencies, allows residents to report incidents directly, and offers essential resources such as an emergency checklist and nearby evacuation center locations. Designed to support both responders and the community, it improves communication, safety awareness, and overall emergency coordination.",
     link: "www.youtube.com",
     type: "Thesis",
     thumbnail: Thesis1,
@@ -103,7 +104,7 @@ export const ProjectData = [
     id: 6,
     name: "Car Rental",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+      "Car Rental is a school project designed to familiarize students with CRUD (Create, Read, Update, Delete) operations in a practical setting. The application provides a user-friendly platform where end-users can browse available vehicles, make reservations, and manage bookings conveniently from their personal computer, simulating a real-world car rental experience.",
     link: "www.youtube.com",
     type: "",
     thumbnail: CarRental1,
