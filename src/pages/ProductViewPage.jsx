@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ProjectData } from "../data/ProjectData";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { useEffect } from "react";
+import { BsDot } from "react-icons/bs";
 
 const ProductViewPage = () => {
   const { slug } = useParams();
@@ -31,7 +32,20 @@ const ProductViewPage = () => {
           </span>
         ))}
       </div>
-      <p className="mb-2">{project.description}</p>
+      <p className="mb-2 whitespace-pre-line">{project.description}</p>
+      <div className="flex items-center mb-2">
+        {project.liveDemo === true && (
+          <>
+            <a href={project.link} target="_blank" className="text-[#34d399]">
+              Live Demo
+            </a>
+            <BsDot />
+          </>
+        )}
+        <a href={project.gitHub} target="_blank" className="text-[#34d399]">
+          Github
+        </a>
+      </div>
       <img
         src={project.thumbnail}
         alt={project.name}

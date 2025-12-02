@@ -4,6 +4,7 @@ import { AppBar, Toolbar, Avatar, IconButton, Drawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState, useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import pro from "../assets/profile.png";
 
 const MainLayout = () => {
   const [open, setOpen] = useState(false);
@@ -83,11 +84,7 @@ const MainLayout = () => {
             <IconButton color="inherit" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
-            <Avatar
-              alt="Ferm"
-              src="/static/images/avatar/2.jpg"
-              sx={{ width: 35, height: 35 }}
-            />
+            <Avatar alt="Ferm" src={pro} sx={{ width: 35, height: 35 }} />
           </Toolbar>
         </AppBar>
 

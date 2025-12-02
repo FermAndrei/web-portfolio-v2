@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { MyInfo } from "../data/MyInfo";
+import pro from "../assets/profile.png";
 
 export function LeftSidebar({ onNavigate, activeSection }) {
   const navItems = [
@@ -28,7 +29,7 @@ export function LeftSidebar({ onNavigate, activeSection }) {
         <div className="flex flex-col items-center text-center pt-4">
           <Avatar
             alt={MyInfo.firstName}
-            src="/static/images/avatar/1.jpg"
+            src={pro}
             sx={{ bgcolor: deepOrange[500], width: 80, height: 80 }}
           />
           <h2 className="text-xl font-bold pt-3 px-3">
@@ -111,12 +112,13 @@ export function LeftSidebar({ onNavigate, activeSection }) {
         </nav>
         {/* Footer */}
         <div className="p-4 border-t border-slate-800 mt-auto">
-          <div className="flex items-center justify-between mb-1.5">
+          {/* dark mode features */}
+          {/* <div className="flex items-center justify-between mb-1.5">
             <span className="text-slate-400 text-xs">Dark Mode</span>
             <div className="w-9 h-5 bg-emerald-600 rounded-full relative cursor-pointer">
               <div className="absolute right-0.5 top-0.5 w-4 h-4 bg-white rounded-full" />
             </div>
-          </div>
+          </div> */}
           <p className="text-slate-500 text-xs">
             Built by Ferm Andrei. <br />© {year} All rights reserved.
           </p>
