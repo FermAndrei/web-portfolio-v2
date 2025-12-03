@@ -33,7 +33,7 @@ const RightSidebar = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleCerts = showAll
     ? MyInfo.certificate
-    : MyInfo.certificate.slice(0, 2);
+    : MyInfo.certificate.slice(0, 3);
   return (
     <aside className="lg:w-60 xl:w-70 flex h-screen sticky top-0 ">
       <div className="flex flex-col h-full bg-slate-900/50 border border-slate-800 overflow-y-auto scrollbar-hide">

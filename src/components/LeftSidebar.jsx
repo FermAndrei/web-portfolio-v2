@@ -120,7 +120,7 @@ export function LeftSidebar({ onNavigate, activeSection }) {
             </div>
           </div> */}
           <p className="text-slate-500 text-xs">
-            Built by Ferm Andrei. <br />© {year} All rights reserved.
+            Built by Ferm Assndrei. <br />© {year} All rights reserved.
           </p>
         </div>
       </div>

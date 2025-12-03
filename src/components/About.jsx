@@ -13,7 +13,7 @@ const About = ({ info }) => {
       </div>
       <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-4">
         <div className="text-slate-300 text-base leading-relaxed">
-          <ExpandableText description={130}>{info.aboutMeDesc}</ExpandableText>
+          {info.aboutMeDesc}
         </div>
       </div>
     </>
